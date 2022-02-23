@@ -37,7 +37,6 @@ const Weather = ({ currentLocation }) => {
                     }
                     forecastData.push(itemData)
                 }
-                console.log('456', forecastData)
                 return forecastData;
             })
             .catch(err => console.log(err));

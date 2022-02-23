@@ -20,15 +20,15 @@ const Home = () => {
 
     useEffect(()=>{
         if(daytime >= 5 && daytime < 15 ){
-            console.log('白天')
+            // console.log('白天')
             document.getElementById('App').style.background=day.morning
         }
         else if(daytime >= 15 && daytime < 21){
-            console.log('傍晚')
+            // console.log('傍晚')
             document.getElementById('App').style.background=day.noon
         }
         else{
-            console.log('晚上')
+            // console.log('晚上')
             document.getElementById('App').style.background=day.evening
         }
     }, [daytime])
@@ -37,14 +37,13 @@ const Home = () => {
         return moment().format('MMMM Do')
     }
 
-    console.log('current = ' + location)
 
     return(
         <div className="Container">
             <div className="App" id='App'>
                 <Controller currentLocation={location} setCurrentLocation={setLocation}></Controller>
                 <div className="tag">
-                    <p style={{fontSize:'12px'}}>{ getCurrentTime() }</p>
+                    <p style={{fontSize:'15px'}}>{ getCurrentTime() }</p>
                     <p style={{fontSize:'25px'}}>{moment().format('H:mm a')}</p>
                 </div>
                 <Weather currentLocation={location}></Weather>
