@@ -44,7 +44,7 @@ const Home = () => {
             <div className="App" id='App'>
                 <Controller currentLocation={location} setCurrentLocation={setLocation}></Controller>
                 <div className="tag">
-                    <p style={{fontSize:'5px'}}>{ getCurrentTime() }</p>
+                    <p style={{fontSize:'12px'}}>{ getCurrentTime() }</p>
                     <p style={{fontSize:'25px'}}>{moment().format('H:mm a')}</p>
                 </div>
                 <Weather currentLocation={location}></Weather>
